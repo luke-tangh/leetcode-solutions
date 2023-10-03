@@ -1,18 +1,16 @@
 #include <vector>
+#include <unordered_map>
 
 using namespace std;
 
 class Solution {
 public:
     int numIdenticalPairs(vector<int>& nums) {
-        int ans = 0;
-        for(int j = 0; j < nums.size(); ++j) {
-            for(int i = 0; i < j; ++i) {
-                if(nums[i] == nums[j]) {
-                    ++ans;
-                }
-            }
+        unordered_map<int, int> M;
+        int pairs = 0;
+        for(int n : nums) {
+            pairs += M[n]++;
         }
-        return ans;
+        return pairs;
     }
 };
