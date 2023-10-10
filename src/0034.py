@@ -2,12 +2,11 @@ class Solution:
     def searchRange(self, nums, target: int):
         if len(nums) < 1:
             return [-1, -1]
-        found = False
-        searchfailed = False
+        found = searchfailed = False
         first = 0
         last = len(nums) - 1
         while not found and not searchfailed:
-            middle = (first+last) // 2
+            middle = (first + last) // 2
             if nums[middle] == target:
                 found = True
             else:
