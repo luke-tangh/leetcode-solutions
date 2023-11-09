@@ -7,7 +7,7 @@ class Solution:
             if s[i] == prev:
                 count += 1
             else:
-                ret += int((1 + count) * count / 2)
+                ret += (1 + count) * count // 2
                 prev = s[i]
                 count = 1
-        return (ret + int((1 + count) * count / 2)) % (10**9 + 7)
+        return (ret + (1 + count) * count // 2) % (10**9 + 7)
