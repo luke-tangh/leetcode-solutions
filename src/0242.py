@@ -8,9 +8,5 @@ class Solution:
         for n in s:
             ana[n] += 1
         for m in t:
-            if m in ana:
-                ana[m] -= 1
-        if not any(ana.values()):
-            return True
-        else:
-            return False
+            ana[m] -= 1
+        return not any(ana.values())
