@@ -1,13 +1,13 @@
 #include <algorithm>
+#include <cmath>
 
 class Solution {  
-private:  
+public:  
     int is_square(int n) {  
         int sqrt_n = (int)(sqrt(n));  
         return (sqrt_n*sqrt_n == n);  
     }
     
-public:
     int numSquares(int n) {  
         if(is_square(n)) {
             return 1;  
@@ -26,4 +26,4 @@ public:
         } 
         return 3;  
     }  
-}; 
+};

@@ -1,10 +1,8 @@
-from collections import defaultdict
+from collections import Counter
 
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        charcount = defaultdict(int)
-        for c in s:
-            charcount[c] += 1
+        charcount = Counter(s)
         for i in range(len(s)):
             if charcount[s[i]] == 1:
                 return i
