@@ -15,7 +15,8 @@ public:
                 newresult.push_back('0'+count);
                 newresult.push_back(result[i-1]);
                 count = 1;
-            }else{
+            }
+            else{
                 count++;
             }
             if(i == result.size()-1){

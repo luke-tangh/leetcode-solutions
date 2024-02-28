@@ -8,3 +8,4 @@ class Solution:
             leftsum += nums[i]
             rightsum -= nums[i]
         return -1
+    

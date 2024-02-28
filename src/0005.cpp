@@ -17,7 +17,8 @@ public:
             r = palindrome(i, i+1);
             if(l.size() > max_str.size()) {
                 max_str = l;
-            }else if(r.size() > max_str.size()) {
+            }
+            else if(r.size() > max_str.size()) {
                 max_str = r;
             }
         }

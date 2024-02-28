@@ -10,16 +10,16 @@ class Solution:
                 wordcount[c] += 1
         for c in s[0:wordlen*len(words)]:
             wordcount[c] -= 1
-        for i in range(len(s) - wordlen*len(words) + 1):
+        for i in range(len(s) - wordlen * len(words) + 1):
             if not any(wordcount.values()):
                 seg = s[i:i+wordlen*len(words)]
                 temp = words[:]
-                for j in range(0, wordlen*len(words), wordlen):
-                    if seg[j:j+wordlen] in temp:
+                for j in range(0, wordlen * len(words), wordlen):
+                    if seg[j:j + wordlen] in temp:
                         temp.remove(seg[j:j+wordlen])
                 if len(temp) == 0:
                     ret.append(i)
-            if i+wordlen*len(words) < len(s):
+            if i + wordlen*len(words) < len(s):
                 wordcount[s[i]] += 1
                 wordcount[s[i + wordlen*len(words)]] -= 1
         return ret

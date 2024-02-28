@@ -13,7 +13,8 @@ public:
             }
             if(haystack[head] == needle[head-tail]) {
                 head++;
-            }else {
+            }
+            else {
                 head = ++tail;
             }
         }

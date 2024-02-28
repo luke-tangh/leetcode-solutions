@@ -8,3 +8,4 @@ class Solution:
             elif nums[i] > target:
                 break
         return ret
+    

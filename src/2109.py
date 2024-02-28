@@ -13,3 +13,4 @@ class Solution:
                 ret += s[i]
             i += 1
         return ret
+    

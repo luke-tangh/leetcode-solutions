@@ -15,7 +15,7 @@ class Solution:
         l, r = self.mergeKLists(lists[:mid]), self.mergeKLists(lists[mid:])
         return self.merge(l, r)
     
-    def merge(self, l, r) -> ListNode():
+    def merge(self, l, r) -> ListNode:
         dummy = root = ListNode()
         while l and r:
             if l.val < r.val:
