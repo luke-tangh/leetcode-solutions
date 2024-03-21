@@ -8,8 +8,9 @@ class Solution:
     def reverseList(self, head):
         dummy = ListNode()
         dummy.next = head
-        while head != None and head.next != None:
+        while head and head.next:
             dummy_next = dummy.next
             temp = head.next
             dummy.next, head.next, temp.next = temp, temp.next, dummy_next
         return dummy.next
+    
